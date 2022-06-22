@@ -1,0 +1,139 @@
+.container{
+    background-color: white;
+    position: relative;
+    margin-top: 200px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 300px;
+    font-family: 'Roboto', sans-serif;
+    height: auto;
+    border-radius: 5px;
+    height:400px
+ 
+
+
+}  
+#mother{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+form{
+    margin-left: 10px;
+}
+h1{
+    text-align: center;
+    margin-top: 5px;
+    font-weight: bolder;
+    
+}
+#member{
+    text-align: center;
+}
+.btn{
+    margin-top: 20px ;
+    margin-bottom: 20px;
+     
+    
+    
+}
+.block{
+    display: block;
+    width: 240px;
+    padding: 10px 35px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    margin-left: 1px;
+    background-color:#6050DC;
+    border: 1px solid ;
+    color: white;
+}
+.block:hover{
+    background-color: blueviolet;
+    box-shadow: 3px 3px 3px #6050DC;
+}
+.mail{
+    margin-top: 5px;
+    
+    
+
+}
+.password{
+    margin-top: 5px;
+}
+.email{
+    display: block;
+    width: 200px;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+.pass{
+    display: block;
+    width: 200px;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+.forget{
+    margin-top: 8px;
+    
+}
+.forget a{
+    text-decoration: none;
+    color: blue;
+}
+#member a{
+    text-decoration: none;
+    color: blue;
+}
+#password_error, #email_error {
+    margin-top: 5px;
+    text-align: left;
+    font-size:small;
+    padding: 1px;
+    width: 230px;
+    background-color: rgba(255,0,0,0.1) ;
+    color:red;
+    display: none;
+}
+.social{
+    text-align: center;
+    margin-top: 15px;
+
+}
+
+.media{
+    margin-top: 15px;
+}
+.fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 10px;
+    border-radius: 50%;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+      box-shadow: 3px 3px 3px #605;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  .fa-google {
+    background: #dd4b39;
+    color: white;
+  }
+  .fa-instagram {
+    background: #9932CC;
+    color: white;
+  }
