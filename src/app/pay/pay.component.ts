@@ -1,6 +1,9 @@
+
 import { Component, OnInit } from '@angular/core';
-import { Router, RouterModule } from '@angular/router';
-import { Mpesa } from 'mpesa-api';
+
+
+
+
 @Component({
   selector: 'app-pay',
   templateUrl: './pay.component.html',
@@ -8,12 +11,39 @@ import { Mpesa } from 'mpesa-api';
 })
 export class PayComponent implements OnInit {
 
-  constructor(private router: Router) { }
+   constructor() { 
+    const accToken= this.getToken();
+    let headers = new Headers();
+    headers.append("Content-Type", "application/json");
+    headers.append("Authorization", `Bearer ${accToken}`);
+    
+    ​
+    fetch("https://sandbox.safaricom.co.ke/mpesa/c2b/v1/simulate", {
+      method: 'POST',
+      headers,
+      body: JSON.stringify({
+        "ShortCode": 600997,
+        "CommandID": "CustomerBuyGoodsOnline",
+        "Amount": "1",
+        "Msisdn": "254708374149",
+        "BillRefNumber": ""
+      })
 
-  ngOnInit(): void {
+    })
+      .then(response => response.text())
+      .then(result => console.log(result))
+      .catch(error => console.log(error));
+      }
+  
+
+
+getToken() {
+  return localStorage.getItem('token');
+}
+   
+   
+   ngOnInit(): void {
+ 
+
+    }
   }
-  btnClick(){
-    this.router.navigate(['/transaction']);
-}
-
-}

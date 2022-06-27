@@ -5,7 +5,7 @@ import { PayComponent } from "./pay/pay.component";
 import { TransactionComponent } from "./item/transaction/transaction.component";
 
 const appRoutes: Routes = [
-    {path: 'item', component: ItemComponent },
+
     {path: 'pay', component: PayComponent },
     {path: '', redirectTo: '/item', pathMatch: 'full'},
     {path: 'transaction', component: TransactionComponent },

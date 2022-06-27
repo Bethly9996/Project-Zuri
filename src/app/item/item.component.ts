@@ -15,9 +15,19 @@ export class ItemComponent implements OnInit {
 
   constructor(private authenticationService: AuthenticationService) { }
 
-  ngOnInit(): void {
-    this.authenticationService.authorize().subscribe(response => console.log(response))
+  ngOnInit(): any {
+    this.authenticationService.authorize().subscribe ((response:any) =>{
+      localStorage.setItem('token',response.access_token);
+      console.log(response);
+    })
+   
   }
+
+  getToken() {
+    return localStorage.getItem('token');
+  }
+
+ 
 
 
 }

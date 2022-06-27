@@ -8,6 +8,8 @@ import { TransactionComponent } from './item/transaction/transaction.component';
 import { PayComponent } from './pay/pay.component';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthenticationService } from './authentication.service';
+import { AppRoutingModule } from './app-routing.module';
+import { BalanceComponent } from './item/balance/balance.component';
 
 
 const routes: Routes = [
@@ -22,19 +24,20 @@ const routes: Routes = [
     CakeListComponent,
     TransactionComponent,
     PayComponent,
+    BalanceComponent
 
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    AppRoutingModule
+    ],
     
-    
-   
-  ],
   
   providers: [AuthenticationService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+ 
+  
 })
 export class AppModule {
 

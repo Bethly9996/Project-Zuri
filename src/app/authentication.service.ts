@@ -16,6 +16,11 @@ export class AuthenticationService {
   private consumerSecret = "ZEiVYukRwYBFyiXv";
 
   constructor(private http: HttpClient) { }
+  httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type' : 'application/json',
+    }),
+  }
 
 
   public authorize(): Observable<any> {
@@ -29,10 +34,13 @@ export class AuthenticationService {
     return btoa(this.consumerKey + ":" + this.consumerSecret);
   }
 
+  
+  
+
 
 }
 
-// sessionStorage.setItem("token", "RITM9nOl5zWRhBlDGKmNgDDApAih");
+
 
 
 
